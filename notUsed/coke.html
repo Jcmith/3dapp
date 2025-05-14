@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_button.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+    <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+<title>Coke Page
+</title>
+</head>
+<body id="bodyColor">
+    <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <h1>1oca</h1>
+                    <h2>Cola</h2>
+                    <h3>Journey</h3>
+                        <p>Refreshing the world, one story at a time</p>
+                </a>
+            </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+    
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Web 3D Applications">About</a>
+                    </li>
+          
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
+                            Drinks
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item active" href="coke.html">Coca Cola</a>
+                            <a class="dropdown-item" href="snake.html">Sprite</a>
+                            <a class="dropdown-item" href="#">Dr Pepper</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<br> <!-- Temporary break until we style the template-->
+<div id="gui-container"></div>
+<div class="container-fluid main-contents">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="card" style="position: relative;">
+                <div class="card-header">
+                    <h1> Lets drink!</h1>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                    <canvas id="threeContainer"></canvas>
+                </div>
+        
+                    <button id="btn">
+                        Open Can
+                    </button>
+        
+                    <button id="toggleWireframe">
+                        Toggle Wireframe
+                    </button>
+        
+                    <button id="rotate">
+                        Rotate
+                    </button>
+        
+                    <button id="switchModel">
+                        Switch Model
+                    </button>
+        
+                        <button id="secondAnimation">
+                            Crush Can
+                        </button>
+                
+           
+        </div>
+    </div>
+</div>
+<div id="threeContainer"></div>
+
+<script>
+    //Function to update the container size (Canvas)
+    function updateContainerSize() {
+        var container = document.getElementById('threeContainer');
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        
+        container.width = width;
+        container.height = height;
+
+    }
+
+    window.addEventListener('load', updateContainerSize);
+    window.addEventListener('resize', updateContainerSize);
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+<script src="./script.js"></script>
+
+
+
+<br>
+<!-- Logo and navigation bar -->
+<nav class="navbar navbar-expand-sm navbar_coca_cola">
+<div class="container-fluid">
+<div class="navbar-text float-left copyright">
+<p><span class="align-baseline"></span>&copy 2024 3D Web Applications</p>
+</div>
+
+<div class="navbar-text float-right social">
+<a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+<a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+<a href="#"><i class="fab fa-github-square fa-2x"></i></a>
+</div>
+</div>
+
+</nav>
+
+
+</body>
+</html>
